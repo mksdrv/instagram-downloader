@@ -36,7 +36,4 @@ def download_image():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    # Stelle sicher, dass der Ordner für die Downloads existiert
-    if not os.path.exists('downloads'):
-        os.makedirs('downloads')
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
